@@ -1,9 +1,11 @@
 import kaboom from "kaboom"
 
 function start_game() {
-	kaboom()
+	kaboom({
+		background: [ 255, 255, 255, ],
+	})
 
-	loadSprite("bean", "/sprites/bean.png")
+	loadSprite("bean", "/sprites/bird.png")
 	loadSound("score", "/sounds/score.mp3")
 	loadSound("wooosh", "/sounds/wooosh.mp3")
 	loadSound("hit", "/sounds/hit.mp3")
