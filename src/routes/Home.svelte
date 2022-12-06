@@ -7,7 +7,7 @@
 
 <div class="container my-3">
     <!-- 게시글 -->
-    <h2 class="border-bottom py-2">zzz</h2>
+    <h2 class="border-bottom py-2">게임 목록</h2>
 
     <div class="card my-3">
         <div class="card-body">
