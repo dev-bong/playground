@@ -336,7 +336,7 @@ function start_game() {
         })
 
         add([
-            text("UP: insane mode", { width: width() / 2, size: 32 }),
+            text("UP botton : crazy mode (dmg up, speed up)", { width: width() / 2, size: 32 }),
             origin("botleft"),
             pos(24, height() - 24),
         ])
