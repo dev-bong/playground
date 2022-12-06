@@ -4,6 +4,9 @@ function start_game() {
 	kaboom()
 
 	loadSprite("bean", "/sprites/bean.png")
+	loadSound("score", "/sounds/score.mp3")
+	loadSound("wooosh", "/sounds/wooosh.mp3")
+	loadSound("hit", "/sounds/hit.mp3")
 
 	scene("game", () => {
 
@@ -39,11 +42,13 @@ function start_game() {
 		// jump
 		onKeyPress("space", () => {
 			bean.jump(JUMP_FORCE)
+			play("wooosh")
 		})
 
 		// mobile
 		onClick(() => {
 			bean.jump(JUMP_FORCE)
+			play("wooosh")
 		})
 
 		function spawnPipe() {
@@ -83,6 +88,7 @@ function start_game() {
 		// callback when bean onCollide with objects with tag "pipe"
 		bean.onCollide("pipe", () => {
 			go("lose", score)
+			play("hit")
 			addKaboom(bean.pos)
 		})
 
@@ -113,6 +119,7 @@ function start_game() {
 		function addScore() {
 			score++
 			scoreLabel.text = score
+			play("score")
 		}
 
 	})
