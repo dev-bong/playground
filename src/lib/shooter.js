@@ -347,13 +347,13 @@ function start_game() {
 
     scene("win", ({ time, boss }) => {
 
-        const b = burp({
-            loop: true,
-        })
+        // const b = burp({
+        //     loop: true,
+        // })
 
-        loop(0.5, () => {
-            b.detune(rand(-1200, 1200))
-        })
+        // loop(0.5, () => {
+        //     b.detune(rand(-1200, 1200))
+        // })
 
         add([
             sprite(boss),
